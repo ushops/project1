@@ -25,3 +25,4 @@ if (file_exists('vendor/autoload.php')) {
 
 // Start our application
 $app = new Application();
+

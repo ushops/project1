@@ -7,6 +7,7 @@
  */
 use Gregwar\Captcha\CaptchaBuilder;
 
+
 class LoginModel
 {
     /**
