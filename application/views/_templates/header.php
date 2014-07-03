@@ -15,7 +15,7 @@
 </head>
 <body>
 	
-	 <?php if (DEBUG) { ?>
+	<?php if (DEBUG) { ?>
 		<div class="debug-helper-box">
 			DEBUG HELPER: you are in the view: <?php echo $filename; ?>
 		</div>
