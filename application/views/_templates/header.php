@@ -14,11 +14,13 @@
     <script type="text/javascript" src="<?php echo URL; ?>public/js/application.js"></script>
 </head>
 <body>
-
-    <div class="debug-helper-box">
-        DEBUG HELPER: you are in the view: <?php echo $filename; ?>
-    </div>
-
+	
+	 <?php if (DEBUG) { ?>
+		<div class="debug-helper-box">
+			DEBUG HELPER: you are in the view: <?php echo $filename; ?>
+		</div>
+	<?php } ?>
+	
     <div class='title-box'>
         <a href="<?php echo URL; ?>">My Application</a>
     </div>
