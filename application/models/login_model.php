@@ -46,7 +46,7 @@ class LoginModel
                                           user_account_type,
                                           user_failed_logins,
                                           user_last_failed_login
-                                   FROM   users
+                                   FROM   usaddress_users
                                    WHERE  (user_name = :user_name OR user_email = :user_name)
                                           AND user_provider_type = :provider_type");
         // DEFAULT is the marker for "normal" accounts (that have a password etc.)
