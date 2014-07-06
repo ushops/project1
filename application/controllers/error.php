@@ -20,6 +20,7 @@ class Error extends Controller
      */
     function index()
     {
+		header("HTTP/1.0 404 Not Found");
         $this->view->render('error/index');
     }
 }
