@@ -62,7 +62,7 @@ class Application
             // obviously mistyped controller name, therefore show 404
             } else {
                 // redirect user to error page (there's a controller for that)
-                header('location: ' . URL . 'error/index');
+                header('location: ' . URL . 'error');
             }
         // if url_controller is empty, simply show the main page (index/index)
         } else {

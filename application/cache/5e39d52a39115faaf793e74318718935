@@ -1,0 +1,1 @@
+a:2:{i:0;O:8:"stdClass":5:{s:7:"user_id";s:1:"8";s:9:"user_name";s:4:"alex";s:10:"user_email";s:17:"alex@ushops.co.il";s:11:"user_active";s:1:"1";s:15:"user_has_avatar";s:1:"0";}i:1;O:8:"stdClass":5:{s:7:"user_id";s:1:"9";s:9:"user_name";s:5:"alex2";s:10:"user_email";s:29:"alex.dolphinexpress@gmail.com";s:11:"user_active";s:1:"1";s:15:"user_has_avatar";s:1:"0";}}

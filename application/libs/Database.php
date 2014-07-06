@@ -31,4 +31,28 @@ class Database extends PDO
          */
         parent::__construct(DB_TYPE . ':host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS, $options);
     }
+	
+	/**
+	 * Getting the results from cache if exists. If not, saving it to cache.
+	 */
+	public function queryWithCache($sql)
+	{
+		$filename = CACHE_PATH . '/' . md5($sql);
+		if (file_exists($filename) && filemtime($filename) > (time() - CACHE_TIME)) {
+			return unserialize(file_get_contents($filename));
+		} else {
+			$result = $this->query($sql);
+			foreach ($result as $row) {
+				$result_array[] = $row;
+			}
+			if (isset($result_array)) {
+				if (file_put_contents($filename, serialize($result_array)) === FALSE) {
+					// log error
+				}
+				return $result_array;
+			} else {
+				return false;
+			}
+		}
+	}
 }
