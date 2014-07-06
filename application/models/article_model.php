@@ -22,7 +22,8 @@ class ArticleModel
      */
     public function getArticle($id)
     {
-        return $this->db->queryWithCache("SELECT * FROM usaddress_articles WHERE id = '$id'");
+        $article = $this->db->queryWithCache("SELECT * FROM usaddress_articles WHERE id = '$id'");
+		return $article[0];
     }
 
 }

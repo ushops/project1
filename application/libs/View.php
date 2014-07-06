@@ -7,6 +7,9 @@
  */
 class View
 {
+	public $title = "";
+	public $description = "";
+	
     /**
      * simply includes (=shows) the view. this is done from the controller. In the controller, you usually say
      * $this->view->render('help/index'); to show (in this example) the view index.php in the folder help.

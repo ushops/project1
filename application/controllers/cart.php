@@ -19,6 +19,8 @@ class Cart extends Controller
      */
     function index()
     {
+		$this->view->title = "| Cart";
+		$this->view->description = "Cart contents";
         $this->view->render('cart/index');
     }
 }

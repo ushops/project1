@@ -21,6 +21,7 @@ class Test extends Controller
     {
 		$test_model = $this->loadModel('Test');
         $this->view->users = $test_model->getAllUsers();
+		$this->view->title = "| Test";
         $this->view->render('test/index');
     }
 }

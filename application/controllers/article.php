@@ -21,6 +21,8 @@ class Article extends Controller
     {
 		$article_model = $this->loadModel('Article');
         $this->view->article = $article_model->getArticle($id);
+		$this->view->title = "| " . $this->view->article->title;
+		$this->view->description = $this->view->article->title;
 		if (!$this->view->article) {
 			header('location: ' . URL . 'error');
 		}
